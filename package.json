@@ -35,7 +35,7 @@
     "test:unit:coverage": "npm run test:unit -- --coverage && open coverage/lcov-report/index.html"
   },
   "dependencies": {
-    "body-scroll-lock": "2.6.4",
+    "body-scroll-lock": "2.7.0",
     "imagesloaded": "4.1.4",
     "lodash": "4.17.15",
     "natural-scroll": "0.2.2",
