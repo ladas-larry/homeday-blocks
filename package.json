@@ -32,7 +32,9 @@
     "test:unit:ci": "npm run test:unit -- --ci --coverage",
     "test:percy": "if [ $PERCY_TOKEN ]; then percy-storybook; else echo 'Skipping test: PERCY_TOKEN is not defined'; fi",
     "coverage": "cat ./coverage/lcov.info | coveralls -v",
-    "test:unit:coverage": "npm run test:unit -- --coverage && open coverage/lcov-report/index.html"
+    "test:unit:coverage": "npm run test:unit -- --coverage && open coverage/lcov-report/index.html",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "body-scroll-lock": "2.6.4",
@@ -41,7 +43,8 @@
     "natural-scroll": "0.2.2",
     "vue": "2.6.11",
     "vue-flickity": "1.2.1",
-    "vue-zoomer": "homeday-de/vue-zoomer#0.4.0"
+    "vue-zoomer": "homeday-de/vue-zoomer#0.4.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@percy/storybook": "3.2.0",
@@ -91,5 +94,6 @@
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "snyk": true
 }
